@@ -2,18 +2,18 @@ package com.example.appjam19.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import com.example.appjam19.R
+import kotlinx.android.synthetic.main.activity_profile.*
 
-class SplashActivity : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        setContentView(R.layout.activity_profile)
 
-        Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, IntroduceActivity::class.java))
-        }, 1500)
+        talentButton.setOnClickListener {
+            startActivity(Intent(this,MyTallentActivity::class.java))
+        }
     }
 }

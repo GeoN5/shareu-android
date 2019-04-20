@@ -6,14 +6,14 @@ import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import com.example.appjam19.R
 
-class SplashActivity : AppCompatActivity() {
+class CompleteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        setContentView(R.layout.activity_complete)
 
         Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, IntroduceActivity::class.java))
-        }, 1500)
+            startActivity(Intent(this,MainActivity::class.java))
+        }, 1000)
     }
 }
