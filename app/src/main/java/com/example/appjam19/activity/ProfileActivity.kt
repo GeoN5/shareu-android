@@ -13,7 +13,8 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         talentButton.setOnClickListener {
-            startActivity(Intent(this,MyTallentActivity::class.java))
+            startActivity(Intent(this,MyTalentActivity::class.java))
         }
+
     }
 }

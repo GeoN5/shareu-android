@@ -4,17 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.appjam19.R
-import kotlinx.android.synthetic.main.activity_my_tallent.*
+import kotlinx.android.synthetic.main.activity_my_talent.*
 
-class MyTallentActivity : AppCompatActivity() {
+class MyTalentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_tallent)
+        setContentView(R.layout.activity_my_talent)
 
         fab.setOnClickListener {
-            startActivity(Intent(this,RegisterTallentActivity::class.java))
+            startActivity(Intent(this,RegisterTalentActivity::class.java))
         }
+
     }
 
 }

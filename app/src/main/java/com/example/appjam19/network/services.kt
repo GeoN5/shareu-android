@@ -1,19 +1,18 @@
 package com.example.appjam19.network
 
-//interface ApiService{
-//    @POST("api/articles")//모든 재능기부 목록
-//    fun articles() : Call<Beans>
-//
-//    @POST("/users")//회원가입
-//    @Multipart
-//    fun register(@Part("data")user : User, @Part profile: MultipartBody.Part): Call<Response>
-//
-//    @DELETE("/users/{userName}")//계정삭제
-//    fun delete(@Path("userName")userName: String) : Call<Response>
-//
-//    @Multipart
-//    @PUT("/users/{userName}")//정보 수정
-//    fun modifyUser(@Path("userName")userName: String, @Part("data")user: User, @Part profile: MultipartBody.Part):Call<UserEditResponse>
-//
-//}
+import retrofit2.Call
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
+import retrofit2.http.Query
+
+interface ApiService{
+
+    @GET("api/articles")//모든 재능기부 목록
+    fun getArticles() : Call<Beans>
+
+    @GET("api/articles/search")
+    @FormUrlEncoded
+    fun getFilter(@Query("address")lat:Double): Call<Beans>//클래스 지도 검색
+
+}
 

@@ -19,5 +19,6 @@ class ClassDetailActivity : AppCompatActivity() {
         second.setOnClickListener {
             startActivity(Intent(this,ClassInfoActivity::class.java))
         }
+
     }
 }

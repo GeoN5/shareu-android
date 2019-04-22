@@ -15,5 +15,6 @@ class CompleteActivity : AppCompatActivity() {
         Handler().postDelayed({
             startActivity(Intent(this,MainActivity::class.java))
         }, 1000)
+
     }
 }

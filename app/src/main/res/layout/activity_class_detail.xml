@@ -2,7 +2,6 @@
 <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".activity.ClassDetailActivity">
@@ -11,9 +10,9 @@
                     android:layout_height="wrap_content">
 
         <ImageView android:id="@+id/image"
-                android:layout_width="match_parent"
+                   android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-        android:src="@drawable/mainsample1"/>
+                   android:src="@drawable/mainsample1"/>
 
         <TextView
                 android:id="@+id/by"
@@ -24,6 +23,7 @@
                 android:textSize="15dp"
                 android:layout_below="@+id/image"
                 android:layout_height="wrap_content"/>
+
         <TextView
                 android:id="@+id/name"
                 android:layout_toEndOf="@+id/by"
@@ -34,35 +34,36 @@
                 android:layout_below="@+id/image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+
         <View 
                 android:id="@+id/view1"
-                android:layout_width="140dp" android:layout_height="2dp"
-        android:background="#fd5765"
-        android:layout_below="@id/name"
-              android:layout_marginTop="5dp"
-        android:layout_alignStart="@+id/name"/>
+                android:layout_width="140dp"
+                android:layout_height="2dp"
+                android:background="#fd5765"
+                android:layout_below="@id/name"
+                android:layout_marginTop="5dp"
+                android:layout_alignStart="@+id/name"/>
         
         <TextView
                 android:id="@+id/content"
                 android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                  android:textSize="45dp"
-                  android:layout_marginTop="10dp"
-                  android:layout_below="@id/view1"
-                  android:layout_centerHorizontal="true"
-        android:text="통기타를 일렉처럼!\n
-띵가띵가띵~"/>
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/view1"
+                android:layout_centerHorizontal="true"
+                android:text="통기타를 일렉처럼!\n띵가띵가띵~"/>
 
         <LinearLayout
                 android:id="@+id/tab"
                 android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/content"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+                android:orientation="horizontal">
 
             <TextView
                     android:id="@+id/first"
@@ -70,7 +71,8 @@
                     android:textColor="#000000"
                     android:textSize="20dp"
                     android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"/>
+
             <TextView
                     android:id="@+id/second"
                     android:text="일정 및 장소"
@@ -80,6 +82,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
+
             <TextView
                     android:id="@+id/third"
                     android:text="평 가"
@@ -90,26 +93,29 @@
         </LinearLayout>
 
         <View android:id="@+id/view2"
-                android:layout_width="100dp" android:layout_height="2dp"
-        android:background="#fd5765"
-        android:layout_below="@id/tab"
-        android:layout_marginTop="10dp"
-        android:layout_alignStart="@+id/tab"/>
+              android:layout_width="100dp"
+              android:layout_height="2dp"
+              android:background="#fd5765"
+              android:layout_below="@id/tab"
+              android:layout_marginTop="10dp"
+              android:layout_alignStart="@+id/tab"/>
 
         <TextView
                 android:id="@+id/word"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text=" 안녕하세요,  서울 서초구에 사는 기타장인 할머니, 김민근 할머니입니다. 저는 제 처녀 시절 우리 할아범을 좋아해서 할아범을 따라 기타연습을 하였습니다. 그렇게 50년이 흘러 저는 이렇게 기타연주라는 재주를 가지게 되었습니다.
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 안녕하세요,  서울 서초구에 사는 기타장인 할머니, 김민근 할머니입니다. 저는 제 처녀 시절 우리 할아범을 좋아해서 할아범을 따라 기타연습을 하였습니다. 그렇게 50년이 흘러 저는 이렇게 기타연주라는 재주를 가지게 되었습니다.
  젊은이들과 소통하고 싶어 기타 클래스를 열게 되었습니다. 힙한 저의 플렉스 기타 연주 클래스를 배워보세요! 좋은 인연으로 만났으면 좋겠습니다~  빠~그!"
-        android:layout_below="@id/view2"
-        android:layout_marginTop="10dp"
-                  android:textSize="20dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"/>
+                android:layout_below="@id/view2"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"/>
 
         <Button
                 android:id="@+id/classButton"
-                android:layout_width="match_parent" android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_alignParentBottom="true"
                 android:layout_below="@+id/word"
                 android:layout_marginTop="20dp"
@@ -117,7 +123,8 @@
                 android:text="클래스 수강하기"
                 android:textSize="20dp"
                 android:elevation="10dp"
-        android:background="#fd5765"/>
+                android:background="#fd5765"/>
+
     </RelativeLayout>
 
 </ScrollView>

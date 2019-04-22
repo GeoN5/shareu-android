@@ -19,5 +19,6 @@ class IntroduceActivity : AppCompatActivity() {
         registerButton.setOnClickListener {
             startActivity(Intent(this,RegisterActivity::class.java))
         }
+
     }
 }

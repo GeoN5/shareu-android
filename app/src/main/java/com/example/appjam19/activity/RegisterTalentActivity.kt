@@ -9,11 +9,11 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import com.example.appjam19.R
 import com.example.appjam19.util.loadImage
-import kotlinx.android.synthetic.main.activity_register_tallent.*
+import kotlinx.android.synthetic.main.activity_register_talent.*
 import pub.devrel.easypermissions.EasyPermissions
 
 
-class RegisterTallentActivity : AppCompatActivity(),EasyPermissions.PermissionCallbacks {
+class RegisterTalentActivity : AppCompatActivity(),EasyPermissions.PermissionCallbacks {
 
     private val cateList: ArrayList<String> = ArrayList()
     private val firstList: ArrayList<String> = ArrayList()
@@ -28,11 +28,10 @@ class RegisterTallentActivity : AppCompatActivity(),EasyPermissions.PermissionCa
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_tallent)
+        setContentView(R.layout.activity_register_talent)
 
         listSet()
         adapterSet()
-        insertSpinner()
 
         talentButton.setOnClickListener {
             startActivity(Intent(this, CompleteActivity::class.java))
@@ -69,16 +68,12 @@ class RegisterTallentActivity : AppCompatActivity(),EasyPermissions.PermissionCa
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if(requestCode == REQUEST_GALLERY_CODE && resultCode == Activity.RESULT_OK){
-            uri = data!!.data//사진 data를 가져옴.
-            if(EasyPermissions.hasPermissions(applicationContext,android.Manifest.permission.READ_EXTERNAL_STORAGE)){
-                pictureImage.loadImage(uri!!,applicationContext)//glide
-            }else{
-                EasyPermissions.requestPermissions(this,"파일을 읽기 위해서는 권한이 필요합니다!",READ_REQUEST_CODE, android.Manifest.permission.READ_EXTERNAL_STORAGE)
+            uri = data!!.data
+                pictureImage.loadImage(uri!!,applicationContext)
             }
         }
-    }
 
-        fun listSet() {
+        private fun listSet() {
             cateList.add("예술")
             cateList.add("운동")
             cateList.add("음악")
@@ -129,13 +124,11 @@ class RegisterTallentActivity : AppCompatActivity(),EasyPermissions.PermissionCa
             secondList.add("강동구")
         }
 
-        fun adapterSet() {
+        private fun adapterSet() {
             cateAdapter = ArrayAdapter(applicationContext, android.R.layout.simple_spinner_dropdown_item, cateList)
             firstAdapter = ArrayAdapter(applicationContext, android.R.layout.simple_spinner_dropdown_item, firstList)
             secondAdapter = ArrayAdapter(applicationContext, android.R.layout.simple_spinner_dropdown_item, secondList)
-        }
 
-        fun insertSpinner() {
             catespinner.adapter = cateAdapter
             spinner1.adapter = firstAdapter
             spinner2.adapter = secondAdapter

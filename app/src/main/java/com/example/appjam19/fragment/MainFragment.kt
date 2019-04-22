@@ -18,7 +18,6 @@ class MainFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance() = MainFragment()
-        val TAG : String = MainFragment::class.java.simpleName
     }
 
     override fun onCreateView(
@@ -29,7 +28,7 @@ class MainFragment : Fragment() {
         return fragmentView
     }
 
-    fun setListener(){
+    private fun setListener(){
         fragmentView.main1.setOnClickListener {
             activity?.startActivity(Intent(context,ClassDetailActivity::class.java))
         }

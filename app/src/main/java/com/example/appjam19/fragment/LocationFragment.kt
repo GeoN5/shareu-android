@@ -23,23 +23,19 @@ class LocationFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance() = LocationFragment()
-
-        val TAG: String = LocationFragment::class.java.simpleName
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         fragmentView = inflater.inflate(com.example.appjam19.R.layout.fragment_location, container, false)
         listSet()
         adapterSet()
-        insertSpinner()
         setListener()
         return fragmentView
     }
 
-    fun listSet() {
+    private fun listSet() {
         firstList.add("서울특별시")
         firstList.add("부산광역시")
         firstList.add("인천광역시")
@@ -89,18 +85,15 @@ class LocationFragment : Fragment() {
         secondList.add("화성시")
     }
 
-    fun adapterSet() {
+    private fun adapterSet() {
         firstAdapter = ArrayAdapter(context!!, R.layout.simple_spinner_dropdown_item, firstList)
         secondAdapter = ArrayAdapter(context!!, R.layout.simple_spinner_dropdown_item, secondList)
-    }
 
-    fun insertSpinner() {
         fragmentView.spinner1.adapter = firstAdapter
         fragmentView.spinner2.adapter = secondAdapter
     }
 
-
-    fun setListener() {
+    private fun setListener() {
         fragmentView.spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
 

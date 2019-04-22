@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.example.appjam19.R
 import kotlinx.android.synthetic.main.activity_class_info.*
-import kotlinx.android.synthetic.main.activity_my_tallent.fab
+import kotlinx.android.synthetic.main.activity_my_talent.fab
 
 class ClassInfoActivity : AppCompatActivity() {
 
@@ -23,5 +23,6 @@ class ClassInfoActivity : AppCompatActivity() {
         accessButton.setOnClickListener {
             startActivity(Intent(this,CompleteActivity::class.java))
         }
+
     }
 }
